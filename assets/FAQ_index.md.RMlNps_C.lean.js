@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,ag as o}from"./chunks/framework.CRdwa1pV.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"FAQ/index.md","filePath":"FAQ/index.md"}'),n={name:"FAQ/index.md"};function l(i,a,p,d,s,h){return r(),t("div",null,a[0]||(a[0]=[o("",10)]))}const m=e(n,[["render",l]]);export{_ as __pageData,m as default};

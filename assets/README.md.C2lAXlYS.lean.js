@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as t,ag as i}from"./chunks/framework.CRdwa1pV.js";const k=JSON.parse('{"title":"Monad 中文社区","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),n={name:"README.md"};function h(o,a,l,r,p,d){return t(),e("div",null,a[0]||(a[0]=[i("",14)]))}const g=s(n,[["render",h]]);export{k as __pageData,g as default};
