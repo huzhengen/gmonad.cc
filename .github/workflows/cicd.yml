@@ -48,7 +48,11 @@ jobs:
         run: npm run docs:build  
 
       - name: Deploy to github pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .vitepress/dist # 或你的实际构建输出目录
+          # 以下设置请根据你的需求配置
+          branch: gh-pages # 部署的目标分支
+          clean: true # 清除旧文件
         
 
