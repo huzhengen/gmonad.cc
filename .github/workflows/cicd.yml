@@ -3,10 +3,10 @@ name: CI/CD for Gmonad.cc
 on:
   pull_request:
     branches:
-      - main  
+      - test-google
   push:
     branches:
-      - main  
+      - test-google
 
 jobs:
   build:  
@@ -29,7 +29,7 @@ jobs:
   deploy:  
     needs: build  
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'  
+    if: github.ref == 'refs/heads/test-google'  
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -47,12 +47,8 @@ jobs:
           VITE_GOOGLE_ANALYTICS_TAG_ID: ${{ secrets.GOOGLE_ANALYTICS_TAG_ID }}
         run: npm run docs:build  
 
-      - name: Deploy to Remote Server via SSH
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}  
-          username: ${{ secrets.SERVER_USERNAME }}  
-          key: ${{ secrets.SERVER_SSH_KEY }} 
-          source: ".vitepress/dist"  
-          target: "/var/www/gmonad.cc/"
+      - name: Deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+        
 

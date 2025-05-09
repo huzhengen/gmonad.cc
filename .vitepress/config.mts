@@ -5,6 +5,7 @@ import type { TransformContext, HeadConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/gmonad.cc/',
   ignoreDeadLinks: true,
   lang: 'zh-CN',
   title: "Monad 中文社区",
